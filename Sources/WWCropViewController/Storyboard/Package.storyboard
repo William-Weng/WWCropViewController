@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Crop View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="WWCropViewController" customModule="WWCropViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TLk-j1-zHo">
+                                <rect key="frame" x="0.0" y="80" width="414" height="736"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="oOr-rA-6aQ"/>
+                                    <constraint firstAttribute="width" constant="414" id="wJD-et-IIf"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s44-f8-UAl" customClass="CropView" customModule="WWCropViewController">
+                                <rect key="frame" x="79" y="320" width="256" height="256"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" tag="25601" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Angle_LeftTop" translatesAutoresizingMaskIntoConstraints="NO" id="htS-UY-Vsq" customClass="ZoomView" customModule="WWCropViewController">
+                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="42.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="25602" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Angle_RightTop" translatesAutoresizingMaskIntoConstraints="NO" id="Dgc-mO-nx1" customClass="ZoomView" customModule="WWCropViewController">
+                                        <rect key="frame" x="213.5" y="0.0" width="42.5" height="42.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="25603" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Angle_LefttBottom" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-Jg-9dh" customClass="ZoomView" customModule="WWCropViewController">
+                                        <rect key="frame" x="0.0" y="213.5" width="42.5" height="42.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="25604" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Angle_RightBottom" translatesAutoresizingMaskIntoConstraints="NO" id="jt7-t6-Yhv" customClass="ZoomView" customModule="WWCropViewController">
+                                        <rect key="frame" x="213.5" y="213.5" width="42.5" height="42.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Dgc-mO-nx1" secondAttribute="trailing" id="10i-Hp-sz9"/>
+                                    <constraint firstAttribute="width" secondItem="s44-f8-UAl" secondAttribute="height" multiplier="1:1" id="6Sq-Zu-c66"/>
+                                    <constraint firstAttribute="bottom" secondItem="jt7-t6-Yhv" secondAttribute="bottom" id="7Sk-fS-Tfo"/>
+                                    <constraint firstItem="htS-UY-Vsq" firstAttribute="leading" secondItem="s44-f8-UAl" secondAttribute="leading" id="AWu-Fh-oFZ"/>
+                                    <constraint firstItem="Dgc-mO-nx1" firstAttribute="top" secondItem="s44-f8-UAl" secondAttribute="top" id="I0z-cx-c6I"/>
+                                    <constraint firstItem="htS-UY-Vsq" firstAttribute="top" secondItem="s44-f8-UAl" secondAttribute="top" id="QjS-9g-t3a"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dvh-Jg-9dh" secondAttribute="bottom" id="lgv-Kh-JMG"/>
+                                    <constraint firstAttribute="trailing" secondItem="jt7-t6-Yhv" secondAttribute="trailing" id="m5h-84-JD3"/>
+                                    <constraint firstItem="Dvh-Jg-9dh" firstAttribute="leading" secondItem="s44-f8-UAl" secondAttribute="leading" id="m9t-mN-1uP"/>
+                                    <constraint firstAttribute="width" constant="256" id="wY9-H9-Orx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s44-f8-UAl" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8M0-PH-8yP"/>
+                            <constraint firstItem="TLk-j1-zHo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="N4W-g1-dwg"/>
+                            <constraint firstItem="s44-f8-UAl" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ND3-ec-PRO"/>
+                            <constraint firstItem="TLk-j1-zHo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gh6-nk-E17"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cropView" destination="s44-f8-UAl" id="XwB-Dt-e9N"/>
+                        <outlet property="myImageView" destination="TLk-j1-zHo" id="ZYN-Bh-rAp"/>
+                        <outlet property="myImageViewHeightConstraint" destination="oOr-rA-6aQ" id="RuK-Cm-vrY"/>
+                        <outlet property="myImageViewWidthConstraint" destination="wJD-et-IIf" id="j6F-hJ-Kt3"/>
+                        <outletCollection property="angleZoomViews" destination="htS-UY-Vsq" collectionClass="NSMutableArray" id="Zap-y1-yMq"/>
+                        <outletCollection property="angleZoomViews" destination="Dgc-mO-nx1" collectionClass="NSMutableArray" id="nhA-dw-od0"/>
+                        <outletCollection property="angleZoomViews" destination="Dvh-Jg-9dh" collectionClass="NSMutableArray" id="7bP-uw-R9X"/>
+                        <outletCollection property="angleZoomViews" destination="jt7-t6-Yhv" collectionClass="NSMutableArray" id="Nul-HO-Pig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Angle_LeftTop" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="Angle_LefttBottom" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="Angle_RightBottom" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="Angle_RightTop" width="42.666667938232422" height="42.666667938232422"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

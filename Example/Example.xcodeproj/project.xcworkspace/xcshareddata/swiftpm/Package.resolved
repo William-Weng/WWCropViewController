@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "WWCropViewController",
+        "repositoryURL": "/Users/william/Desktop/WWCropViewController",
+        "state": {
+          "branch": null,
+          "revision": "51127cf7ffb577cdf136a111a046c5db30a960d1",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "WWPrint",
+        "repositoryURL": "https://github.com/William-Weng/WWPrint",
+        "state": {
+          "branch": null,
+          "revision": "e4ad2863717465f224aa676f10a3a7ff1df58f7c",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
