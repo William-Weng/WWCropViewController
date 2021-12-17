@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "WWCropViewController",
-        "repositoryURL": "/Users/william/Desktop/WWCropViewController",
+        "repositoryURL": "https://github.com/William-Weng/WWCropViewController.git",
         "state": {
           "branch": null,
-          "revision": "51127cf7ffb577cdf136a111a046c5db30a960d1",
-          "version": "0.5.0"
+          "revision": "5ae93f63b1b73980699371a9f0aa164a0a13d4bf",
+          "version": "1.0.0"
         }
       },
       {
