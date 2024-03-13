@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "WWCropViewController",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v14)
     ],
     products: [.library(name: "WWCropViewController", targets: ["WWCropViewController"]),
     ],
