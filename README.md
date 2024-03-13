@@ -1,8 +1,9 @@
 # WWCropViewController
-[![Swift-5.5](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://developer.apple.com/swift/) [![iOS-13.0](https://img.shields.io/badge/iOS-13.0-pink.svg?style=flat)](https://developer.apple.com/swift/) [![Swift Package Manager-SUCCESS](https://img.shields.io/badge/Swift_Package_Manager-SUCCESS-blue.svg?style=flat)](https://developer.apple.com/swift/) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift-5.6](https://img.shields.io/badge/Swift-5.6-orange.svg?style=flat)](https://developer.apple.com/swift/) [![iOS-13.0](https://img.shields.io/badge/iOS-13.0-pink.svg?style=flat)](https://developer.apple.com/swift/) [![Swift Package Manager-SUCCESS](https://img.shields.io/badge/Swift_Package_Manager-SUCCESS-blue.svg?style=flat)](https://developer.apple.com/swift/) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg?style=flat)](https://developer.apple.com/swift/)
 
-Crop picture widget.
-裁切圖片小工具.
+### [Introduction - 簡介](https://swiftpackageindex.com/William-Weng)
+- Crop picture widget.
+- 裁切圖片小工具.
 
 ![](./Example.gif)
 
@@ -12,6 +13,16 @@ dependencies: [
     .package(url: "https://github.com/William-Weng/WWCropViewController.git", .upToNextMajor(from: "1.0.0"))
 ]
 ```
+
+### Function - 可用函式
+|函式|功能|
+|-|-|
+|build()|建立WWCropViewController
+|cropPhoto()|裁切圖片|
+|cropViewTypeSetting(_:)|設定縮放框比例 / 種類 (1:1 / 4:3 / 16:9)|
+|recoverOriginalPhoto()|還原成一開始的照片|
+|updateCropViewBackgroundColor(_:)|設定縮放框的底色|
+|angleImagesSetting(_:)|設定縮放的四角圖示 (↖左上 / ↗右上 / ↙左下 / ↘右下)|
 
 ### Example
 ```swift

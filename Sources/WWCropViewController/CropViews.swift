@@ -8,14 +8,14 @@
 import UIKit
 
 /// 裁切框
-final class CropView: UIView {
+class CropView: UIView {
     
     override func draw(_ rect: CGRect) { super.draw(rect) }
     
     /// 圓形裁切框
     func circle(_ size: CGSize) {
         initSetting(size)
-        layer._maskedCorners(radius: self.bounds.height / 2.0)
+        layer._maskedCorners(radius: self.bounds.height * 0.5)
         subviews._isHidden()
         _gestureRecognizerSetting(types: [.drag, .scale])
     }
@@ -45,7 +45,7 @@ final class CropView: UIView {
 }
 
 /// 四角的縮放框
-final class ZoomView: UIImageView {
+class ZoomView: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

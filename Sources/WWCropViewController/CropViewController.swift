@@ -34,18 +34,22 @@ open class WWCropViewController: UIViewController {
 }
 
 // MARK: - 開放使用
-extension WWCropViewController {
+public extension WWCropViewController {
     
     /// 建立WWCropViewController
     /// - Returns: WWCropViewController?
-    static public func build() -> WWCropViewController? {
+    static func build() -> WWCropViewController? {
         guard let viewController = UIStoryboard(name: "Package", bundle: Bundle.module).instantiateInitialViewController() as? WWCropViewController else { return nil }
         return viewController
     }
-    
+}
+
+// MARK: - 開放使用
+public extension WWCropViewController {
+        
     /// 裁切圖片
     /// - Returns: UIImage?
-    public func cropPhoto() -> UIImage? {
+    func cropPhoto() -> UIImage? {
         
         myImageView.image = cropImage(for: cropViewType)
         cropView.center = view.center
@@ -56,7 +60,7 @@ extension WWCropViewController {
     
     /// 設定縮放框比例 / 種類 (1:1 / 4:3 / 16:9)
     /// - Parameter type: Constant.CropViewType
-    public func cropViewTypeSetting(_ type: Constant.CropViewType) {
+    func cropViewTypeSetting(_ type: Constant.CropViewType) {
         
         switch type {
         case .rectangle: cropView.rectangle(Constant.CropViewMultiplier.to1_1.size(with: view))
@@ -72,7 +76,7 @@ extension WWCropViewController {
     
     /// 還原成一開始的照片
     /// - Returns: UIImage?
-    public func recoverOriginalPhoto() -> UIImage? {
+    func recoverOriginalPhoto() -> UIImage? {
         
         myImageView.image = photo
         updateImageViewSizeConstraint()
@@ -82,14 +86,14 @@ extension WWCropViewController {
     
     /// 設定縮放框的底色
     /// - Parameter color: UIColor
-    public func updateCropViewBackgroundColor(_ color: UIColor) {
+    func updateCropViewBackgroundColor(_ color: UIColor) {
         cropViewBackgroundColor = color
         cropView.backgroundColor = cropViewBackgroundColor
     }
     
     /// 設定縮放的四角圖示 (↖左上 / ↗右上 / ↙左下 / ↘右下)
     /// - Parameter images: [UIImage]?
-    public func angleImagesSetting(_ images: [UIImage]?) {
+    func angleImagesSetting(_ images: [UIImage]?) {
         
         guard let images = images else { return }
         
@@ -100,11 +104,11 @@ extension WWCropViewController {
 }
 
 // MARK: - 小工具
-extension WWCropViewController {
+private extension WWCropViewController {
     
     /// 裁切圖片 - 四邊形 / 圓形
     /// - Returns: UIImage?
-    private func cropImage(for type: Constant.CropViewType) -> UIImage? {
+    func cropImage(for type: Constant.CropViewType) -> UIImage? {
         
         cropView.center = myImageView._center(from: cropView)
         
@@ -116,7 +120,7 @@ extension WWCropViewController {
     }
     
     /// 更新ImageView的尺寸 => 以滿版為主 (寬 or 長)
-    private func updateImageViewSizeConstraint() {
+    func updateImageViewSizeConstraint() {
         
         guard let image = myImageView.image else { return }
         
