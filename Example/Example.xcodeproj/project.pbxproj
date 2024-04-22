@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1DE9222769F4C60008986C /* WWCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 3D1DE9212769F4C60008986C /* WWCropViewController */; };
 		3DAC9C1927016E78006663C2 /* WWPrint in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAC9C1827016E78006663C2 /* WWPrint */; };
 		3DBCD87426F198EF00522E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBCD87326F198EF00522E3B /* AppDelegate.swift */; };
 		3DBCD87826F198EF00522E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBCD87726F198EF00522E3B /* ViewController.swift */; };
 		3DBCD87B26F198EF00522E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87926F198EF00522E3B /* Main.storyboard */; };
 		3DBCD87D26F198F300522E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87C26F198F300522E3B /* Assets.xcassets */; };
 		3DBCD88026F198F300522E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87E26F198F300522E3B /* LaunchScreen.storyboard */; };
+		81FCE3272BD6144400479291 /* WWCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 81FCE3262BD6144400479291 /* WWCropViewController */; };
+		81FCE3292BD615E700479291 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCE3282BD615E700479291 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3DBCD87C26F198F300522E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DBCD87F26F198F300522E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DBCD88126F198F300522E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81FCE3282BD615E700479291 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DAC9C1927016E78006663C2 /* WWPrint in Frameworks */,
-				3D1DE9222769F4C60008986C /* WWCropViewController in Frameworks */,
+				81FCE3272BD6144400479291 /* WWCropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +46,7 @@
 			children = (
 				3DBCD87226F198EF00522E3B /* Example */,
 				3DBCD87126F198EF00522E3B /* Products */,
+				81FCE3252BD6144400479291 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBCD87726F198EF00522E3B /* ViewController.swift */,
+				81FCE3282BD615E700479291 /* Extension.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -100,6 +104,13 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
+		81FCE3252BD6144400479291 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,7 +129,7 @@
 			name = Example;
 			packageProductDependencies = (
 				3DAC9C1827016E78006663C2 /* WWPrint */,
-				3D1DE9212769F4C60008986C /* WWCropViewController */,
+				81FCE3262BD6144400479291 /* WWCropViewController */,
 			);
 			productName = Example;
 			productReference = 3DBCD87026F198EF00522E3B /* Example.app */;
@@ -150,7 +161,7 @@
 			mainGroup = 3DBCD86726F198EF00522E3B;
 			packageReferences = (
 				3DAC9C1727016E78006663C2 /* XCRemoteSwiftPackageReference "WWPrint" */,
-				3D1DE9202769F4C60008986C /* XCRemoteSwiftPackageReference "WWCropViewController" */,
+				81FCE3222BD6126C00479291 /* XCLocalSwiftPackageReference "../../Downloads/WWCropViewController" */,
 			);
 			productRefGroup = 3DBCD87126F198EF00522E3B /* Products */;
 			projectDirPath = "";
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DBCD87826F198EF00522E3B /* ViewController.swift in Sources */,
+				81FCE3292BD615E700479291 /* Extension.swift in Sources */,
 				3DBCD87426F198EF00522E3B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,35 +407,34 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		3D1DE9202769F4C60008986C /* XCRemoteSwiftPackageReference "WWCropViewController" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/William-Weng/WWCropViewController.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		81FCE3222BD6126C00479291 /* XCLocalSwiftPackageReference "../../Downloads/WWCropViewController" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Downloads/WWCropViewController;
 		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
 		3DAC9C1727016E78006663C2 /* XCRemoteSwiftPackageReference "WWPrint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWPrint";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3D1DE9212769F4C60008986C /* WWCropViewController */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3D1DE9202769F4C60008986C /* XCRemoteSwiftPackageReference "WWCropViewController" */;
-			productName = WWCropViewController;
-		};
 		3DAC9C1827016E78006663C2 /* WWPrint */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3DAC9C1727016E78006663C2 /* XCRemoteSwiftPackageReference "WWPrint" */;
 			productName = WWPrint;
+		};
+		81FCE3262BD6144400479291 /* WWCropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81FCE3222BD6126C00479291 /* XCLocalSwiftPackageReference "../../Downloads/WWCropViewController" */;
+			productName = WWCropViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// 裁切圖片的ViewController
+// MARK: - 裁切圖片的ViewController
 open class WWCropViewController: UIViewController {
         
     @IBOutlet weak var cropView: CropView!
@@ -17,18 +17,19 @@ open class WWCropViewController: UIViewController {
     @IBOutlet var angleZoomViews: [ZoomView]!
     
     public var photo: UIImage?
-    public var angleZoomViewImages: [UIImage]?
-    public var cropViewBackgroundColor: UIColor = .black.withAlphaComponent(0.3)
-    public var cropViewType: Constant.CropViewType = .rectangle
     
-    public override func viewDidLoad() {
+    var angleZoomViewImages: [UIImage]?
+    var cropViewBackgroundColor: UIColor = .black.withAlphaComponent(0.3)
+    var cropViewType: Constant.CropViewType = .rectangle
+    
+    open override func viewDidLoad() {
         super.viewDidLoad()
         cropViewTypeSetting(cropViewType)
         angleImagesSetting(angleZoomViewImages)
     }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         _ = recoverOriginalPhoto()
     }
 }
@@ -46,7 +47,18 @@ public extension WWCropViewController {
 
 // MARK: - 開放使用
 public extension WWCropViewController {
-        
+    
+    /// 初始化設定
+    /// - Parameters:
+    ///   - cropViewType: 裁切框外型
+    ///   - angleZoomViewImages: 四邊形裁切框的四邊圖示
+    ///   - cropViewBackgroundColor: 裁切框背景色
+    func initSetting(cropViewType: Constant.CropViewType = .rectangle, angleZoomViewImages: [UIImage]? = nil, cropViewBackgroundColor: UIColor = .black.withAlphaComponent(0.3)) {
+        self.cropViewType = cropViewType
+        self.angleZoomViewImages = angleZoomViewImages
+        self.cropViewBackgroundColor = cropViewBackgroundColor
+    }
+    
     /// 裁切圖片
     /// - Returns: UIImage?
     func cropPhoto() -> UIImage? {

@@ -1,21 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "wwcropviewcontroller",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/William-Weng/WWCropViewController.git",
-      "state" : {
-        "revision" : "5ae93f63b1b73980699371a9f0aa164a0a13d4bf",
-        "version" : "1.0.0"
-      }
-    },
-    {
       "identity" : "wwprint",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWPrint",
       "state" : {
-        "revision" : "0acf1057863faea81c3ded2057c21b09c3435435",
-        "version" : "1.3.0"
+        "revision" : "8f5928f5d36624d77f8fc563fd8e31a59cfac6b6",
+        "version" : "1.3.1"
       }
     }
   ],
