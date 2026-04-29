@@ -36,10 +36,10 @@ private extension ViewController {
             return
         }
         
+        cropViewController.loadViewIfNeeded()
+        cropViewController.setImage(image)
+        
         self.cropViewController = cropViewController
         self._changeContainerView(to: cropViewController, at: containerView)
-        
-        cropViewController.setImage(image)
-        cropViewController.loadViewIfNeeded()
     }
 }
