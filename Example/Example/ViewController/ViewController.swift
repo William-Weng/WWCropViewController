@@ -2,53 +2,45 @@
 //  ViewController.swift
 //  Example
 //
-//  Created by William.Weng on 2021/12/15.
-//  ~/Library/Caches/org.swift.swiftpm/
-//  file:///Users/william/Desktop/WWCropViewController
+//  Created by William.Weng on 2026/4/29.
+//
 
 import UIKit
-import WWPrint
 import WWCropViewController
 
 final class ViewController: UIViewController {
     
-    @IBOutlet weak var containerView: UIView!
-    
-    private let angleZoomViewImages: [UIImage] = ([#imageLiteral(resourceName: "Angle_LeftTop"), #imageLiteral(resourceName: "Angle_RightTop"), #imageLiteral(resourceName: "Angle_LefttBottom"), #imageLiteral(resourceName: "Angle_RightBottom")])
+    @IBOutlet var containerView: UIView!
+    @IBOutlet weak var resultImageView: UIImageView!
     
     private var cropViewController: WWCropViewController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         containerViewSetting()
     }
     
-    @IBAction func cropPhotoAction(_ sender: UIButton) {
-        _ = cropViewController?.cropPhoto()
-        wwPrint(cropViewController?.photo)
+    @IBAction func cropImage(_ sender: UIButton) {
+        
+        guard let cropImage = cropViewController?.cropImage() else { return }
+        resultImageView.image = cropImage
     }
-    
-    @IBAction func recoverPhotoAction(_ sender: UIButton) { _ = cropViewController?.recoverOriginalPhoto() }
-    @IBAction func cropViewTypeAction1(_ sender: UIButton) { cropViewController?.cropViewTypeSetting(.rectangle) }
-    @IBAction func cropViewTypeAction2(_ sender: UIButton) { cropViewController?.cropViewTypeSetting(.scaleRectangle(.to4_3)) }
-    @IBAction func cropViewTypeAction3(_ sender: UIButton) { cropViewController?.cropViewTypeSetting(.scaleRectangle(.to9_16)) }
 }
 
-// MARK: - 基本設定
 private extension ViewController {
     
-    /// 基本設定
     func containerViewSetting() {
         
-        guard let viewController = WWCropViewController.build() else { return }
-                
-        viewController.photo = #imageLiteral(resourceName: "Wallpaper")
-        viewController.initSetting(cropViewType: .circle, angleZoomViewImages: angleZoomViewImages, cropViewBackgroundColor: .blue.withAlphaComponent(0.3))
+        guard let cropViewController = WWCropViewController.new,
+              let image = UIImage(named: "example")
+        else {
+            return
+        }
         
-        cropViewController = viewController
-        cropViewController?.loadViewIfNeeded()
+        cropViewController.loadViewIfNeeded()
+        cropViewController.setImage(image)
         
-        self._changeContainerView(to: viewController, at: containerView)
+        self.cropViewController = cropViewController
+        self._changeContainerView(to: cropViewController, at: containerView)
     }
 }
-
