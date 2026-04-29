@@ -52,7 +52,6 @@ private extension CropOverlayView {
         
         (1..<count).forEach { index in
             let x = width * CGFloat(index) / CGFloat(count)
-            path.move(to: CGPoint(x: 0, y: 0)) // 這行多餘，可省略
             path.move(to: CGPoint(x: x, y: 0))
             path.addLine(to: CGPoint(x: x, y: height))
         }
