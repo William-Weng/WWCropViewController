@@ -14,15 +14,13 @@ final class ViewController: UIViewController {
     @IBOutlet weak var resultImageView: UIImageView!
     
     private var cropViewController: WWCropViewController?
-        
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-        
-    @IBAction func cropImage(_ sender: UIButton) {
-        
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         containerViewSetting()
-        
+    }
+    
+    @IBAction func cropImage(_ sender: UIButton) {
         guard let cropImage = cropViewController?.cropImage() else { return }
         resultImageView.image = cropImage
     }
