@@ -20,7 +20,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="fgH-cH-xzp">
-                                        <rect key="frame" x="0.0" y="0.0" width="557.66666666666663" height="457"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210.66666666666666" height="172.66666666666666"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -96,6 +97,6 @@
         <image name="Angle_LefttBottom" width="42.666667938232422" height="42.666667938232422"/>
         <image name="Angle_RightBottom" width="42.666667938232422" height="42.666667938232422"/>
         <image name="Angle_RightTop" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="example.png" width="557.69140625" height="456.89141845703125"/>
+        <image name="example.png" width="210.65142822265625" height="172.59428405761719"/>
     </resources>
 </document>

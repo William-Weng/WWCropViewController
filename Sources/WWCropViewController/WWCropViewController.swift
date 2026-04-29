@@ -63,10 +63,25 @@ public extension WWCropViewController {
 // MARK: - UIScrollViewDelegate
 extension WWCropViewController: UIScrollViewDelegate {}
 public extension WWCropViewController {
-
-     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-         return imageView
-     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        dynamicContentInset(with: scrollView)
+    }
+    
+    /// 動態調整內容邊距 (Content Inset)，確保內容在縮放過程中始終保持置中 => 當圖片尺寸小於 ScrollView 的可視範圍時，此函式會計算剩餘的空白區域，並透過設定 contentInset 將圖片強行拉回畫面中央。當圖片放大至超過可視範圍時，邊距會自動歸零，恢復正常的滾動行為。
+    /// - Parameter scrollView: 當前操作的目標 ScrollView。
+    func dynamicContentInset(with scrollView: UIScrollView) {
+        
+        let boundsHeight = scrollView.bounds.height
+        let contentHeight = scrollView.contentSize.height
+        let offsetY = max((boundsHeight - contentHeight) * 0.5, 0)
+        
+        scrollView.contentInset = UIEdgeInsets(top: offsetY, left: 0, bottom: offsetY, right: 0)
+    }
 }
 
 // MARK: - 小工具

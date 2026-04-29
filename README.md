@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/34dfe487-f3b6-473f-a9bf-e2ef409cc57a
 透過 Swift Package Manager 加入專案：
 ```swift
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWCropViewController", .upToNextMinor(from: "2.0.0"))
+    .package(url: "https://github.com/William-Weng/WWCropViewController", .upToNextMinor(from: "2.0.2"))
 ]
 ```
 
