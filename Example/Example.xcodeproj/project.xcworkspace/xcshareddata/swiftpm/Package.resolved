@@ -1,0 +1,15 @@
+{
+  "originHash" : "2a6235526b3f03cdcbee50499896f688e479c4cd9277954d04362ccd20cd3a1f",
+  "pins" : [
+    {
+      "identity" : "wwcropviewcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWCropViewController",
+      "state" : {
+        "revision" : "3d4b44a1849ffc4c3fc9cf2df28a98d2d17647d6",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

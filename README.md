@@ -6,8 +6,6 @@
 [![Swift Package Manager-SUCCESS](https://img.shields.io/badge/Swift_Package_Manager-SUCCESS-blue.svg?style=flat)](https://developer.apple.com/swift/) 
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg?style=flat)](https://developer.apple.com/swift/)
 
-`WWCropViewController` 是一個專為 iOS 開發設計的輕量級、高性能圖片裁切解決方案。它採用 **非破壞性編輯 (Non-destructive Editing)** 架構，透過 `Core Image` 渲染管線，確保裁切過程畫質無損，且完全不受圖片縮放與解析度影響。
-
 ## 🎉 相關說明
 > [`WWCropViewController` is a lightweight, high-performance image cropping solution designed for iOS development. Built on a **non-destructive editing** architecture and utilizing the `Core Image` rendering pipeline, it ensures lossless quality, remaining completely independent of image scaling or resolution.](https://developer.apple.com/documentation/coreimage/ciimage)
 
@@ -15,7 +13,9 @@
 
 ## 📷 [效果預覽](https://peterpanswift.github.io/iphone-bezels/)
 
-[![]()](https://freepngimg.com/png/94945-smash-star-for-3ds-kirby-character)
+[![](https://github.com/user-attachments/assets/24ce7982-c506-4b5c-ba8f-cb874e58c21d)](https://freepngimg.com/png/94945-smash-star-for-3ds-kirby-character)
+
+https://github.com/user-attachments/assets/e5655d54-d560-4ae0-a4cf-be21fb2970c5
 
 <div align="center">
 

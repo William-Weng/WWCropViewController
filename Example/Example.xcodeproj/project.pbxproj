@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81BF7DED2FA1AFE8007F16F9 /* WWCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 81BF7DEC2FA1AFE8007F16F9 /* WWCropViewController */; };
+		81B060192FA1F6040088EB91 /* WWCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 81B060182FA1F6040088EB91 /* WWCropViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81BF7DED2FA1AFE8007F16F9 /* WWCropViewController in Frameworks */,
+				81B060192FA1F6040088EB91 /* WWCropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				81BF7DEC2FA1AFE8007F16F9 /* WWCropViewController */,
+				81B060182FA1F6040088EB91 /* WWCropViewController */,
 			);
 			productName = Example;
 			productReference = 817EE1FE2EB1FA050036B57C /* Example.app */;
@@ -122,7 +122,7 @@
 			mainGroup = 817EE1F52EB1FA050036B57C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				81BF7DE82FA1AF07007F16F9 /* XCLocalSwiftPackageReference "../../@WWCropViewController" */,
+				81B060172FA1F6040088EB91 /* XCRemoteSwiftPackageReference "WWCropViewController" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 817EE1FF2EB1FA050036B57C /* Products */;
@@ -365,17 +365,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		81BF7DE82FA1AF07007F16F9 /* XCLocalSwiftPackageReference "../../@WWCropViewController" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../@WWCropViewController";
+/* Begin XCRemoteSwiftPackageReference section */
+		81B060172FA1F6040088EB91 /* XCRemoteSwiftPackageReference "WWCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWCropViewController";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.0.0;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		81BF7DEC2FA1AFE8007F16F9 /* WWCropViewController */ = {
+		81B060182FA1F6040088EB91 /* WWCropViewController */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81BF7DE82FA1AF07007F16F9 /* XCLocalSwiftPackageReference "../../@WWCropViewController" */;
+			package = 81B060172FA1F6040088EB91 /* XCRemoteSwiftPackageReference "WWCropViewController" */;
 			productName = WWCropViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
