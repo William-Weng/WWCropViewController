@@ -162,9 +162,15 @@ private extension WWCropViewController {
         
         let boundsHeight = scrollView.bounds.height
         let contentHeight = scrollView.contentSize.height
-        let offsetY = max((boundsHeight - contentHeight) * 0.5, 0)
         
-        scrollView.contentInset = UIEdgeInsets(top: offsetY, left: 0, bottom: offsetY, right: 0)
+        var contentInset: UIEdgeInsets = .zero
+        
+        if (boundsHeight > contentHeight) {
+            let offsetY = (boundsHeight - contentHeight) * 0.5
+            contentInset = UIEdgeInsets(top: offsetY, left: 0, bottom: offsetY, right: 0)
+        }
+                
+        scrollView.contentInset = contentInset
     }
 }
 
