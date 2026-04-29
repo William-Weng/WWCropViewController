@@ -43,6 +43,7 @@ public extension WWCropViewController {
     /// - Parameter image: 目標 UI 圖片物件。
     func setImage(_ image: UIImage) {
         self.imageView.image = image
+        updateZoomScale(for: image)
     }
     
     /// 執行裁切操作並取得裁切後的圖片 => 此函式會自動計算當前裁切框 (CropView) 對應原圖的歸一化座標，並透過渲染管線輸出最終的裁切影像。
@@ -68,8 +69,8 @@ public extension WWCropViewController {
      }
 }
 
-// MARK: - 開放使用
-public extension WWCropViewController {
+// MARK: - 小工具
+private extension WWCropViewController {
     
     /// 建立WWCropViewController
     /// - Returns: WWCropViewController?
@@ -100,6 +101,21 @@ private extension WWCropViewController {
     func scrollViewZoomScale(_ zoomScale: ClosedRange<Double>)  {
         scrollView.minimumZoomScale = zoomScale.lowerBound
         scrollView.maximumZoomScale = zoomScale.upperBound
+    }
+    
+    /// 根據圖片原始尺寸與 ScrollView 的視窗大小，自動計算並設定最適合的初始縮放比例 => 此方法確保圖片在載入後能以「Aspect Fit」模式自動縮放至剛好填滿可視區域，並設定 ScrollView 的縮放限制，使使用者操作時能維持良好的可視範圍。
+    /// - Parameter image: 當前載入的 UIImage。
+    func updateZoomScale(for image: UIImage) {
+
+        let scrollViewSize = scrollView.bounds.size
+        let widthScale = scrollViewSize.width / image.size.width
+        let heightScale = scrollViewSize.height / image.size.height
+        let minScale = min(widthScale, heightScale)
+        
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
+        scrollView.contentSize = image.size
+        imageView.frame.size = image.size
     }
     
     /// 計算並回傳裁切框相對於圖片原始尺寸的歸一化矩形 (Normalized Rect) => 此歸一化矩形以 0.0 到 1.0 的比例表示，使其完全與解析度及放大倍率解耦。

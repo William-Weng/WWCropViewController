@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81B060192FA1F6040088EB91 /* WWCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 81B060182FA1F6040088EB91 /* WWCropViewController */; };
+		81B0601C2FA1F8860088EB91 /* WWCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 81B0601B2FA1F8860088EB91 /* WWCropViewController */; };
+		81BB0A5C2FA1FAEB003DEF2F /* WWCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 81BB0A5B2FA1FAEB003DEF2F /* WWCropViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B060192FA1F6040088EB91 /* WWCropViewController in Frameworks */,
+				81B0601C2FA1F8860088EB91 /* WWCropViewController in Frameworks */,
+				81BB0A5C2FA1FAEB003DEF2F /* WWCropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +93,8 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				81B060182FA1F6040088EB91 /* WWCropViewController */,
+				81B0601B2FA1F8860088EB91 /* WWCropViewController */,
+				81BB0A5B2FA1FAEB003DEF2F /* WWCropViewController */,
 			);
 			productName = Example;
 			productReference = 817EE1FE2EB1FA050036B57C /* Example.app */;
@@ -122,7 +125,7 @@
 			mainGroup = 817EE1F52EB1FA050036B57C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				81B060172FA1F6040088EB91 /* XCRemoteSwiftPackageReference "WWCropViewController" */,
+				81BB0A5A2FA1FAEB003DEF2F /* XCRemoteSwiftPackageReference "WWCropViewController" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 817EE1FF2EB1FA050036B57C /* Products */;
@@ -161,7 +164,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20260429;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Setting/Info.plist;
@@ -170,12 +173,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = idv.william..Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -194,7 +197,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20260429;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Setting/Info.plist;
@@ -203,12 +206,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = idv.william..Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -366,7 +369,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		81B060172FA1F6040088EB91 /* XCRemoteSwiftPackageReference "WWCropViewController" */ = {
+		81BB0A5A2FA1FAEB003DEF2F /* XCRemoteSwiftPackageReference "WWCropViewController" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWCropViewController";
 			requirement = {
@@ -377,9 +380,13 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		81B060182FA1F6040088EB91 /* WWCropViewController */ = {
+		81B0601B2FA1F8860088EB91 /* WWCropViewController */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81B060172FA1F6040088EB91 /* XCRemoteSwiftPackageReference "WWCropViewController" */;
+			productName = WWCropViewController;
+		};
+		81BB0A5B2FA1FAEB003DEF2F /* WWCropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81BB0A5A2FA1FAEB003DEF2F /* XCRemoteSwiftPackageReference "WWCropViewController" */;
 			productName = WWCropViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
