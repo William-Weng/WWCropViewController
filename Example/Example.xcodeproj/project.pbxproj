@@ -377,7 +377,7 @@
 			repositoryURL = "https://github.com/William-Weng/WWCropViewController";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.0.1;
+				minimumVersion = 2.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

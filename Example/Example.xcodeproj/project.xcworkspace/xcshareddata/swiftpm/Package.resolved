@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWCropViewController",
       "state" : {
-        "revision" : "7c5463688122dd96dca3848fa751e6b6307bea3a",
-        "version" : "2.0.1"
+        "revision" : "ad6f782a9ded06bffc956b5a4a55aec0093b11c5",
+        "version" : "2.0.2"
       }
     }
   ],
