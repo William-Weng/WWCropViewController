@@ -13,7 +13,7 @@
 
 ## 📷 [效果預覽](https://peterpanswift.github.io/iphone-bezels/)
 
-[![](https://github.com/user-attachments/assets/24ce7982-c506-4b5c-ba8f-cb874e58c21d)](https://freepngimg.com/png/94945-smash-star-for-3ds-kirby-character)
+[![](https://github.com/user-attachments/assets/112c0576-12f9-4907-869a-3315112a37d1)](https://freepngimg.com/png/94945-smash-star-for-3ds-kirby-character)
 
 https://github.com/user-attachments/assets/34dfe487-f3b6-473f-a9bf-e2ef409cc57a
 
